@@ -1,37 +1,21 @@
-=====================
-HR at Salifort Motors
-=====================
+# README
 
+## Project Goal
 
-.. image:: https://img.shields.io/pypi/v/hr_at_salifort_motors.svg
-        :target: https://pypi.python.org/pypi/hr_at_salifort_motors
+The goal of this project is to predict employee turnover and identify the key factors that influence employees leaving a company. By understanding which variables play the biggest role in turnover, I aim to provide actionable insights that can help improve employee retention. The project specifically looks into features like employee satisfaction, performance evaluations, tenure, and workload, all of which can impact the likelihood of an employee leaving.
 
-.. image:: https://img.shields.io/travis/useinov12/hr_at_salifort_motors.svg
-        :target: https://travis-ci.com/useinov12/hr_at_salifort_motors
+## Project Setup
 
-.. image:: https://readthedocs.org/projects/hr-at-salifort-motors/badge/?version=latest
-        :target: https://hr-at-salifort-motors.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
+For this project, I used Python along with libraries like **pandas**, **numpy**, **scikit-learn**, and **seaborn**. The dataset consists of around 12,000 records, capturing various attributes related to employee behavior. To address class imbalance between employees who stayed and those who left, I applied upsampling techniques to improve model accuracy. The analysis was conducted in Jupyter Notebook, with cross-validation used to evaluate model performance.
 
+## Analysis Applied
 
+The analysis involved building a Logistic Regression model to predict turnover. I started with an exploration of feature correlations using a heatmap, which showed that employee satisfaction was the most critical factor. I then implemented logistic regression, handling the class imbalance with upsampling to ensure the model was better at identifying employees likely to leave. Metrics like precision, recall, and F1-score were used to assess model performance, especially after applying the class-balancing techniques.
 
+## Results Found
 
-Python Boilerplate contains all the boilerplate you need to create a Python package.
+The most important insight from the analysis was that **satisfaction level** was by far the strongest predictor of whether an employee would leave, with a negative correlation. After balancing the data, the model’s ability to predict employee turnover improved significantly, with an F1-score increasing from 0.34 to 0.79. This showed that the model became more reliable in identifying employees at risk of leaving, while still performing well for employees likely to stay.
 
+## Conclusion
 
-* Free software: MIT license
-* Documentation: https://hr-at-salifort-motors.readthedocs.io.
-
-
-Features
---------
-
-* TODO
-
-Credits
--------
-
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+In conclusion, improving employee satisfaction should be the top priority for reducing turnover. The Logistic Regression model, particularly after addressing class imbalance, proved to be an effective tool for predicting which employees are likely to leave. These insights provide a foundation for creating targeted employee retention strategies.
